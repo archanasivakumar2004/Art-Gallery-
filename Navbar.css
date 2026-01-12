@@ -27,7 +27,7 @@
 
 /* LOGO */
 .logo-box h1 {
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -39,11 +39,11 @@
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 32px;
+  gap: 20px;
 }
 
 .nav-links li {
-  font-size: 14px;
+  font-size: 10px;
   cursor: pointer;
   position: relative;
   padding-bottom: 6px;
@@ -67,13 +67,31 @@
 
 /* TICKETS BUTTON */
 .ticket-box button {
-  background-color: #000;
+  background: #000;
   color: #fff;
   border: none;
-  padding: 12px 26px;
+  padding: 12px 24px;
   font-size: 12px;
+  font-weight: 600;
   cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
 }
+
+/* HOVER EFFECT (same as hero button) */
+.ticket-box button:hover {
+  background-color: #111;                 /* slight light */
+  box-shadow: 0 0 16px rgba(0,0,0,0.35);  /* soft glow */
+  transform: translateY(-1px);            /* subtle lift */
+}
+
 
 /* MENU ICON (HAMBURGER) */
 .icon-box {
