@@ -1,0 +1,129 @@
+/* SECTION */
+.exhibitions-section {
+  background-color: #e6e6d5;
+  padding: 80px 70px;
+}
+
+/* TITLE */
+.exhibitions-title {
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #111;
+}
+
+/* GRID */
+.exhibitions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+
+/* CARD */
+.exhibition h3 {
+  font-size: 26px;
+  margin: 10px 0 14px;
+  color: #111;
+}
+
+/* IMAGE */
+.image-wrapper {
+  position: relative;
+  height: 320px; /* taller like reference */
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* IMAGE HOVER EFFECT */
+.image-wrapper img {
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.exhibition:hover .image-wrapper img {
+  transform: scale(1.08); /* slow zoom */
+  filter: brightness(1.05); /* light effect */
+}
+
+.image-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.15);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none; /* 🔥 IMPORTANT */
+}
+
+.exhibition:hover .image-wrapper::after {
+  opacity: 1;
+}
+
+
+/* BOOK CIRCLE */
+.book-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #d8c29d;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+
+ transition: background-color 0.3s ease,
+              transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+/* LIGHT EFFECT ON HOVER */
+.book-btn:hover {
+  background-color: #e6d3ae;
+  transform: scale(1.1);
+  box-shadow:
+    0 0 18px rgba(216, 194, 157, 0.9),
+    0 0 30px rgba(216, 194, 157, 0.6);
+}
+
+.book-btn:hover {
+  text-shadow: 0 0 6px rgba(255,255,255,0.8);
+}
+
+
+/* DATE */
+.date {
+  margin-top: 18px;
+  font-size: 16px;
+  color: #9a9a9a;
+}
+
+/* CATEGORY LABEL */
+.paint-box {
+  margin-top: 12px;
+  padding: 6px 16px;
+  border: 1px solid #000;
+  background: transparent;
+  font-size: 14px;
+  cursor: default;
+}
+
+.book-btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(216, 194, 157, 0.8); /* glow */
+}
+
+.image-wrapper {
+  cursor: pointer;
+}
