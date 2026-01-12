@@ -1,0 +1,126 @@
+/* Dont miss section */
+.dont-miss {
+  background-color: #e6e7d6;
+  padding: 40px 60px;
+} /* title */
+.dont-miss-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 12px;
+} /* divider */
+.dont-miss > hr {
+  border: none;
+  border-top: 1px solid #222;
+  margin: 20px 0;
+} /* each item */
+.dont-miss-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  align-items: stretch;
+  gap: 40px;
+  height: 320px;
+} /* item divider */
+.item-divider {
+  border-top: 1px solid #222;
+  margin-top: 0;
+} /* left date */
+.dont-miss-date h3 {
+  font-size: 48px;
+}
+.dont-miss-date p {
+  font-size: 18px;
+  color: #555;
+} /* center title */
+.dont-miss-heading h1 {
+  font-size: 52px;
+  text-align: center;
+  margin-top: 12px;
+    position: relative;
+  display: inline-block;
+  cursor: pointer;
+} /* right image */
+.dont-miss-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.dont-miss-image img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease, filter 0.6s ease;
+
+}
+
+/* underline */
+.dont-miss-heading h1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+/* hover underline animation */
+.dont-miss-heading h1:hover::after {
+  width: 100%;
+  left: 0;
+}
+.dont-miss-image:hover img {
+  filter: brightness(1.15);
+}
+.dont-miss-image img:hover {
+  cursor: pointer;
+  transform: translateY(1%);
+  background: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+} /* round BOOK button */
+.book-btn-round {
+  position: absolute;
+  top: -20px;
+  right: -5px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #d8b98a;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: 
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+/* hover light + glow */
+.book-btn-round:hover {
+  background-color: #e6d3ae;
+  transform: scale(1.1);
+  box-shadow:
+    0 0 18px rgba(216, 194, 157, 0.9),
+    0 0 30px rgba(216, 194, 157, 0.6);
+}
+
+.dont-miss-item:hover .dont-miss-image img {
+  transform: scale(1.06);
+  filter: brightness(1.05);
+}
+.dont-miss-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.15);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+}
+
+.dont-miss-item:hover .dont-miss-image::after {
+  opacity: 1;
+}
