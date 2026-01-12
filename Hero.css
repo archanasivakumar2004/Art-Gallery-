@@ -1,0 +1,95 @@
+
+/* HERO CONTAINER */
+.hero {
+  position: relative;          /* REQUIRED */
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+}
+
+/* BACKGROUND VIDEO */
+.bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* WHITE BOX ON TOP OF VIDEO */
+.white-box {
+  position: absolute;          /* 🔥 THIS IS THE KEY */
+  top: 50%;
+  left: 70px;
+  transform: translateY(-50%);
+  z-index: 5;                  /* ABOVE VIDEO */
+  background: white;
+  width: 380px;
+  padding: 34px;
+  box-shadow: 0 0 18px rgba(0,0,0,0.25);
+}
+
+/* ============ WHITE BOX OVER VIDEO ============ */
+
+.hero-box {
+  position: absolute;          /* REQUIRED */
+  top: 50%;
+  left: 70px;
+  transform: translateY(-50%);
+  z-index: 10;                 /* ABOVE VIDEO */
+
+  background-color: #ffffff;  /* FORCE WHITE */
+  width: 400px;
+  padding: 35px;
+  height: 350px;
+  box-shadow: 0 0 18px rgba(0,0,0,0.25);
+}
+
+
+/* TEXT */
+
+.hero-box h2 {
+  font-size: 35px;
+  margin-bottom: 16px;
+  color: #000;
+}
+
+
+.subtitle {
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 30px;
+  color: #000;
+}
+
+
+.desc {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #444;
+  margin-top: 10px;
+}
+
+.white-box p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* BUTTON */
+
+.hero-btn {
+  margin-top: 24px;
+  background: #000;
+  color: #fff;
+  padding: 14px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  width: 100%;
+  cursor: pointer;
+   display: flex;              /* ✅ key */
+  align-items: center;        /* vertical center */
+  justify-content: center;
+}
