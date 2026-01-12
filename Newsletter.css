@@ -1,0 +1,129 @@
+/* ===================== */
+/* NEWSLETTER SECTION */
+/* ===================== */
+
+.newsletter {
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+}
+
+/* Background image */
+.newsletter-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.75);
+}
+
+/* Dark overlay for readability */
+.newsletter::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+/* Content */
+.newsletter-content {
+  position: absolute;
+  top: 50%;
+  left: 80px;
+  transform: translateY(-50%);
+  max-width: 620px;
+  color: white;
+  z-index: 2;
+
+  /* subtle entrance animation */
+  animation: fadeSlideIn 1s ease forwards;
+}
+
+/* Title */
+.newsletter-content h2 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* underline accent */
+.newsletter-content h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 120px;
+  height: 3px;
+  background-color: #d8b98a;
+}
+
+/* description */
+.newsletter-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+  max-width: 520px;
+}
+
+/* ===================== */
+/* FORM */
+/* ===================== */
+
+.newsletter-form {
+  display: flex;
+  max-width: 520px;
+}
+
+/* input */
+.newsletter-form input {
+  flex: 1;
+  padding: 16px;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+}
+
+.newsletter-form input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* button (reuse project animation style) */
+.newsletter-form .member-btn {
+  padding: 0 36px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  position: relative;
+  margin-left: 3px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: 
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* hover animation */
+.newsletter-form .member-btn:hover {
+  background: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.6);
+}
+
+/* ===================== */
+/* ANIMATION */
+/* ===================== */
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
+}
