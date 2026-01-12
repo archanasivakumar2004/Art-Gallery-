@@ -1,0 +1,64 @@
+/* ===================== */
+/* MEMBER SECTION */
+/* ===================== */
+
+.member-section {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+   overflow: hidden;
+}
+
+.member-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.member-content {
+  position: absolute;
+  top: 50%;
+  right: 80px;
+  transform: translateY(-50%);
+  max-width: 520px;
+  color: white;
+  animation: heroBoxEnter 1s ease-out forwards; 
+}
+
+.member-content h2 {
+  font-size: 56px;
+   font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.member-content p {
+  font-size: 18px;
+  margin-bottom: 28px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.9);
+}
+
+.member-btn {
+  background: rgba(255,255,255,0.85);
+  border: none;
+  padding: 14px 40px;   
+  font-weight: 600;
+   font-size: 14px;
+  cursor: pointer;
+   color: #000;
+    display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.member-btn:hover {
+  background: white;
+  box-shadow: 0 0 16px rgba(255,255,255,0.6);
+}
+
