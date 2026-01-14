@@ -1,0 +1,165 @@
+/* ===================== */
+/* FOOTER BASE */
+/* ===================== */
+
+.footer {
+  background: #e6e7d6;
+}
+
+/* ===================== */
+/* TOP BOX CONTAINER */
+/* ===================== */
+
+.footer-top-box {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1.5fr;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+/* ===================== */
+/* INDIVIDUAL BOXES */
+/* ===================== */
+
+.footer-box {
+  padding: 70px 60px;
+  border-right: 1px solid black;
+}
+
+.footer-box:last-child {
+  border-right: none;
+}
+
+/* ===================== */
+/* TYPOGRAPHY */
+/* ===================== */
+
+.footer-logo {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.footer-sub {
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.footer-box h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.footer-box p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+}
+
+.footer-about {
+  max-width: 420px;
+  margin-bottom: 40px;
+}
+
+/* ===================== */
+/* LINKS */
+/* ===================== */
+
+.footer-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.footer-links h4 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.footer-links p {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.footer-links p:hover {
+  opacity: 0.6;
+}
+
+/* ===================== */
+/* NEWSLETTER */
+/* ===================== */
+
+.footer-newsletter {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.footer-newsletter input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid black;
+  background: transparent;
+  outline: none;
+}
+
+.footer-newsletter button {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-newsletter button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.35);
+}
+
+/* ===================== */
+/* SOCIAL */
+/* ===================== */
+
+.follow-title {
+  margin-bottom: 16px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-social span {
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.footer-social span:hover {
+  transform: scale(1.2);
+}
+
+/* ===================== */
+/* LOGO ROW */
+/* ===================== */
+
+.footer-logos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 0;
+  border-bottom: 1px solid black;
+  font-weight: 600;
+}
+
+/* ===================== */
+/* BOTTOM TEXT */
+/* ===================== */
+
+.footer-bottom {
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+  color: #666;
+}
+
