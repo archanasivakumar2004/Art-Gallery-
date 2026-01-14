@@ -1,109 +1,107 @@
-/* RESET (keep if not already in index.css) */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* NAVBAR CONTAINER */
-.navbar {
-  width: 100%;
-  height: 90px;
-  display: flex;
-  background-color: #dedfcd;
-  border-bottom: 1px solid #000;
-  font-family: serif;
+body {
+  margin: 0;
 }
 
-/* COMMON BOX STYLE */
-.nav-box {
+
+
+
+/* ===============================
+   NAVBAR
+================================ */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background: #e7e6d4;
+  transition: all 0.4s ease;
+  z-index: 1000;
+}
+
+.navbar.scrolled {
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ===============================
+   INNER (FULL WIDTH)
+================================ */
+.navbar-inner {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  border-right: 1px solid #000;
-  padding: 0 40px;
+  justify-content: space-between;
 }
 
-/* LOGO */
-.logo-box h1 {
-  font-size: 20px;
+/* ===============================
+   LOGO BOX (LEFT)
+================================ */
+.logo-box {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 45px;
+
+  border-right: 1px solid rgba(0, 0, 0, 0.35);
+}
+
+.logo {
+  font-size: 30px;
   font-weight: 600;
 }
 
-/* MENU CENTER */
+/* ===============================
+   MENU BOX (RIGHT)
+================================ */
 .menu-box {
-  flex: 1;
-}
-
-.nav-links {
-  list-style: none;
+  height: 100%;
   display: flex;
-  gap: 20px;
+  align-items: center;
+  padding: 0 45px;
+
+  border-left: 1px solid rgba(0, 0, 0, 0.35);
 }
 
-.nav-links li {
-  font-size: 10px;
+/* hamburger */
+.menu-btn {
+  width: 26px;
   cursor: pointer;
-  position: relative;
-  padding-bottom: 6px;
 }
 
-/* HOVER UNDERLINE EFFECT */
-.nav-links li::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
+.menu-btn span {
+  display: block;
   height: 2px;
-  background-color: #000;
-  transition: width 0.3s ease;
+  background: #000;
+  margin: 7px 0;
+  opacity: 0.8;
+  transition: all 0.3s ease;
 }
 
-.nav-links li:hover::after {
+/* shorter middle */
+.menu-btn span:nth-child(2) {
+  width: 70%;
+}
+
+/* bottom slightly short */
+.menu-btn span:nth-child(3) {
+  width: 85%;
+}
+
+/* hover grow */
+.menu-btn:hover span:nth-child(3) {
   width: 100%;
 }
 
-/* TICKETS BUTTON */
-.ticket-box button {
-  background: #000;
-  color: #fff;
-  border: none;
-  padding: 12px 24px;
-  font-size: 12px;
-  font-weight: 600;
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transition:
-    background-color 0.3s ease,
-    box-shadow 0.3s ease,
-    transform 0.3s ease;
-}
-
-/* HOVER EFFECT (same as hero button) */
-.ticket-box button:hover {
-  background-color: #111;                 /* slight light */
-  box-shadow: 0 0 16px rgba(0,0,0,0.35);  /* soft glow */
-  transform: translateY(-1px);            /* subtle lift */
-}
-
-
-/* MENU ICON (HAMBURGER) */
-.icon-box {
-  width: 80px;
-  flex-direction: column;
-  gap: 6px;
-  cursor: pointer;
-  border-right: none;
-}
-
-.icon-box span {
-  width: 22px;
-  height: 2px;
-  background-color: #000;
+/* ===============================
+   CONTENT OFFSET
+================================ */
+.hero,
+.main-content {
+  padding-top: 80px;
 }
