@@ -1,40 +1,36 @@
+import { useEffect, useState } from "react";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const menus = [
-    "HOME",
-    "PAGES",
-    "SHOP",
-    "EVENTS",
-    "BLOG",
-    "PORTFOLIO",
-    "SHOWS",
-  ];
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="navbar">
-      <div className="nav-box logo-box">
-        <h1>Unimate</h1>
-      </div>
+    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
+      <div className="navbar-inner">
+        {/* Logo Box */}
+        <div className="logo-box">
+          <h1 className="logo">Unimate</h1>
+        </div>
 
-      <div className="nav-box menu-box">
-        <ul className="nav-links">
-          {menus.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
+        {/* Menu Button */}
+        <div className="menu-box">
+          <div className="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
       </div>
-
-      <div className="nav-box ticket-box">
-        <button>TICKETS</button>
-      </div>
-
-      <div className="nav-box icon-box">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </header>
+    </nav>
   );
 };
 
