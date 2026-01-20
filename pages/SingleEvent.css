@@ -1,0 +1,192 @@
+/* ---------------------------------------------------
+   PAGE BASE
+--------------------------------------------------- */
+.event-page {
+  padding-top: 100px; /* header height */
+  background-color: #e6e5d6;
+}
+
+.event-not-found {
+  padding: 150px;
+  font-size: 24px;
+}
+
+/* ===================================================
+   GLOBAL PREMIUM BUTTON (REUSED FROM HERO)
+=================================================== */
+
+.btn-primary {
+  margin-top: 30px;
+  background-color: #000;
+  color: #fff;
+  padding: 14px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  width: 100%;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  border: none;
+
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #111;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Arrow animation */
+.btn-primary .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.btn-primary:hover .arrow {
+  transform: translateX(6px);
+}
+
+
+/* ---------------------------------------------------
+   BREADCRUMB
+--------------------------------------------------- */
+.event-breadcrumb-bar {
+  height: 90px;
+  background-color: #e6e5d6;
+  border-bottom: 1px solid #000;
+  border-top: 1px solid #000;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   padding: 0 60px; 
+}
+
+.event-breadcrumb {
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #000;
+  opacity: 0.85;
+}
+
+/* Gap below breadcrumb (reference layout) */
+.event-breadcrumb-gap {
+  height: 120px;
+  background-color: #e6e5d6;
+}
+
+/* ---------------------------------------------------
+   IMAGE
+--------------------------------------------------- */
+.event-image-wrapper {
+  background-color: #e6e5d6;
+  display: flex;
+  justify-content: center;
+   padding: 0 60px 100px;
+}
+
+.event-image-wrapper img {
+  width: 100%;       /* 🔥 full inside padding */
+  max-width: none;   /* 🔥 remove any limit */
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---------------------------------------------------
+   CONTENT LAYOUT
+--------------------------------------------------- */
+.event-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 140px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+}
+
+
+/* ---------------------------------------------------
+   LEFT COLUMN
+--------------------------------------------------- */
+.event-info h4 {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.info-block {
+  margin-bottom: 30px;
+}
+
+.event-info p {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 4px;
+}
+
+
+/* ---------------------------------------------------
+   RIGHT COLUMN
+--------------------------------------------------- */
+.event-date {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.event-details h1 {
+  font-size: 42px;
+  margin: 20px 0;
+}
+
+.event-tag {
+  display: inline-block;
+  border: 1px solid #000;
+  padding: 4px 10px;
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+
+.event-description {
+  font-size: 15px;
+  line-height: 1.8;
+  opacity: 0.85;
+}
+
+.event-description p {
+  margin-bottom: 32px; /* creates the visible gap */
+  line-height: 1.8;
+}
+
+
+/* Breadcrumb links (ONLY main home) */
+.breadcrumb-link {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.breadcrumb-link:hover {
+  opacity: 0.6;
+}
+
+/* Non-clickable breadcrumb text */
+.breadcrumb-text {
+  color: #000;
+  opacity: 0.85;
+  cursor: default;
+}
+
+/* Separator */
+.breadcrumb-separator {
+  margin: 0 6px;
+  opacity: 0.6;
+}
